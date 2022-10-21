@@ -1,0 +1,345 @@
+
+.randomm a {
+float : left;
+display:block;
+overflow:hidden;
+width:100px;
+height:100px;
+margin:0 auto;
+background:url(randomm.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+text-align: center;
+border-radius:10px;
+border:#888 solid 1px;
+background-color: #fff;
+margin: 0px 10px 0px 0px;
+}
+.randomm a:hover {background-position: 0 -100px; border:#cc3300 solid 1px;}
+.randomm2 a {
+display:block;
+overflow:hidden;
+width:100px;
+height:100px;
+margin:0 auto;
+background:url(randomm2.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+text-align: center;
+border-radius:10px;
+border:#888 solid 1px;
+}
+.randomm2 a:hover {background-position: 0 -100px; border:#cc3300 solid 1px;}
+
+.s-sutare a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_sutare.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-sutare a:hover {background-position: 0 -100px;}
+
+.s-poison a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_poison.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-poison a:hover {background-position: 0 -100px;}
+
+.s-carnival a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_carnival.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-carnival a:hover {background-position: 0 -100px;}
+
+.s-ice a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_ice.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-ice a:hover {background-position: 0 -100px;}
+
+.s-siralos a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_siralos.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-siralos a:hover {background-position: 0 -100px;}
+
+.s-hshsky a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_hshsky.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-hshsky a:hover {background-position: 0 -100px;}
+
+.s-wada a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_wadanohara.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-wada a:hover {background-position: 0 -100px;}
+
+.s-wada_re a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_wadanohara_re.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-wada_re a:hover {background-position: 0 -100px;}
+
+.s-gray2 a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_graygarden2.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-gray2 a:hover {background-position: 0 -100px;}
+
+.s-gray a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_graygarden.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-gray a:hover {background-position: 0 -100px;}
+
+.s-moge a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_mogeko.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-moge a:hover {background-position: 0 -100px;}
+
+.s-yoake a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_yoake.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-yoake a:hover {background-position: 0 -100px;}
+
+.s-utopia a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_utopia.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-utopia a:hover {background-position: 0 -100px;}
+
+.s-utopiaA a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_utopiaA.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+border:#000000 solid 0px;
+margin-left: auto;margin-right: auto;
+}
+.s-utopiaA a:hover {background-position: 0 -100px;}
+
+.s-chaos_sea a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_chaos_sea.gif) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-chaos_sea a:hover {background-position: 0 -100px;}
+
+.s-kaitsu a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_kaitsu.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-kaitsu a:hover {background-position: 0 -100px;}
+
+.s-sunatsu a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_sunatsu.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-sunatsu a:hover {background-position: 0 -100px;}
+
+.s-kaiteikaijou a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_kaiteikaijou.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-kaiteikaijou a:hover {background-position: 0 -100px;}
+
+.s-a4ta4nu4ta a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_a4ta4nu4ta.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-a4ta4nu4ta a:hover {background-position: 0 -100px;}
+
+.s-reficul a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_reficul.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-reficul a:hover {background-position: 0 -100px;}
+
+.s-bullying a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_bullying.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-bullying a:hover {background-position: 0 -100px;}
+
+.s-The_gray_garden a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_The_gray_garden.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-The_gray_garden a:hover {background-position: 0 -100px;}
+
+.s-ivlin a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_ivlin.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-ivlin a:hover {background-position: 0 -100px;}
+
+.s-sunatsu2 a {
+display:block;
+overflow:hidden;
+width:500px;
+height:100px;margin:0 auto;
+background:url(b_sunatsu2.png) 0 0 no-repeat;
+text-indent:100%;white-space:nowrap;
+margin:10px 0px 0px 0px;
+border-radius:9px;
+margin-left: auto;margin-right: auto;
+}
+.s-sunatsu2 a:hover {background-position: 0 -100px;}
+
+

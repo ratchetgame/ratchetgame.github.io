@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://funamusea.com/story/gray_garden/ -->
+<html class=" ipenprwi idc0_343"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="SHORTCUT ICON" href="http://funamusea.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./gray_garden_files/w.css">
+<link rel="stylesheet" type="text/css" href="./gray_garden_files/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="./gray_garden_files/lity.min.css">
+<script type="text/javascript" src="./gray_garden_files/jquery-1.8.1.min.js.download"></script><script>(function(){class RuffleMimeType{constructor(a,b,c){this.type=a,this.description=b,this.suffixes=c}}class RuffleMimeTypeArray{constructor(a){this.__mimetypes=[],this.__named_mimetypes={};for(let b of a)this.install(b)}install(a){let b=this.__mimetypes.length;this.__mimetypes.push(a),this.__named_mimetypes[a.type]=a,this[a.type]=a,this[b]=a}item(a){return this.__mimetypes[a]}namedItem(a){return this.__named_mimetypes[a]}get length(){return this.__mimetypes.length}}class RufflePlugin extends RuffleMimeTypeArray{constructor(a,b,c,d){super(d),this.name=a,this.description=b,this.filename=c}install(a){a.enabledPlugin||(a.enabledPlugin=this),super.install(a)}}class RufflePluginArray{constructor(a){this.__plugins=[],this.__named_plugins={};for(let b of a)this.install(b)}install(a){let b=this.__plugins.length;this.__plugins.push(a),this.__named_plugins[a.name]=a,this[a.name]=a,this[b]=a}item(a){return this.__plugins[a]}namedItem(a){return this.__named_plugins[a]}refresh(){}get length(){return this.__plugins.length}}const FLASH_PLUGIN=new RufflePlugin("Shockwave Flash","Shockwave Flash 32.0 r0","ruffle.js",[new RuffleMimeType("application/futuresplash","Shockwave Flash","spl"),new RuffleMimeType("application/x-shockwave-flash","Shockwave Flash","swf"),new RuffleMimeType("application/x-shockwave-flash2-preview","Shockwave Flash","swf"),new RuffleMimeType("application/vnd.adobe.flash.movie","Shockwave Flash","swf")]);function install_plugin(a){navigator.plugins.install||Object.defineProperty(navigator,"plugins",{value:new RufflePluginArray(navigator.plugins),writable:!1}),navigator.plugins.install(a),0<a.length&&!navigator.mimeTypes.install&&Object.defineProperty(navigator,"mimeTypes",{value:new RuffleMimeTypeArray(navigator.mimeTypes),writable:!1});for(var b=0;b<a.length;b+=1)navigator.mimeTypes.install(a[b])}install_plugin(FLASH_PLUGIN);})();</script><script src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=30314161913"></script>
+<script type="text/javascript" src="./gray_garden_files/lity.min.js.download"></script>
+<meta name="description" content="天使と悪魔でRPG">
+<title>灰色庭園</title>
+<script>
+window.skipProcent = 0;
+window.maxFPS = 0;
+window.frameDelay = 0;
+
+var rafs = 0;
+
+var raf = window.requestAnimationFrame;
+var nextRAFTime = Date.now();
+
+var mockedRaf = (callback) => {
+    var skip = (window.maxFPS !== 0 && Date.now() < nextRAFTime) || Math.random() < window.skipProcent;
+    
+    if (skip) {
+        skippingRaf(callback);
+    } else {
+        nextRAFTime = Date.now() + window.frameDelay;
+        raf(callback);
+    }
+
+    return rafs++;
+}
+
+function skippingRaf(func) {
+    raf(() => {
+        window.requestAnimationFrame(func);
+    })
+}
+
+window.setFPSLimit = function(v) {
+    window.frameDelay = 1000 / v;
+    window.maxFPS = v;
+}
+
+window.setSkipProcent = function(v) {
+    window.skipProcent = v; 
+}
+
+window.enableVirtualRAF = function enableDropFPS() {
+    window.requestAnimationFrame = mockedRaf;
+}
+
+window.disableVirtualRAF = function enableDropFPS() {
+    window.requestAnimationFrame = raf;
+}
+
+window.disableDropFPS = function disableDropFPS() {
+    window.skipProcent = 0;
+}
+
+window.disableLimitFPS = function disableLimitFPS() {
+    window.maxFPS = 0;
+}
+</script></head>
+<body id="TOP" style="zoom: 1;">
+<div class="wak">
+<div class="wakue"><img src="./gray_garden_files/banner.gif" alt="灰色庭園" fivy8xthc=""></div>
+<p class="top"><img src="./gray_garden_files/top.png" alt="img"></p>
+
+<div class="naka1">
+<div class="naka2">
+<p class="mokuji">◆ あらすじ ◆</p>
+天使と悪魔が平和に暮らす世界、「灰色庭園」。<br>
+お花畑で遊ぶのが大好きな悪魔ヨザファイアは、<br>
+ゆかいな仲間たちと共に平和に暮らしていた。<br>
+<p class="kaigyo">しかし、ある日お花畑に謎のコウモリが現れて……。</p>
+
+<p class="mokuji">◆ 登場キャラクター ◆</p>
+<img src="./gray_garden_files/character.png" alt="img">
+
+<p class="mokuji">◆ サンプル画面 ◆</p>
+<div class="parent-container">
+<a href="./gray_garden_files/sample1.png"><img src="./gray_garden_files/sample1.png" alt="img" class="smpl"></a>
+<a href="./gray_garden_files/sample2.png"><img src="./gray_garden_files/sample2.png" alt="img" class="smpl"></a>
+<a href="./gray_garden_files/sample3.png"><img src="./gray_garden_files/sample3.png" alt="img" class="smpl"></a>
+<a href="./gray_garden_files/sample4.png"><img src="./gray_garden_files/sample4.png" alt="img" class="smpl"></a>
+<a href="./gray_garden_files/sample5.png"><img src="./gray_garden_files/sample5.png" alt="img" class="smpl"></a>
+<a href="./gray_garden_files/sample6.png"><img src="./gray_garden_files/sample6.png" alt="img" class="smpl"></a>
+</div>
+
+<p class="mokuji">◆ ダウンロード ◆</p>
+【タイトル】灰色庭園<br>
+【ジャンル】天使と悪魔でRPG<br>
+【対象】全年齢向け<br>
+【プレイ時間】6時間程度<br>
+【公開日】2012年12月27日<br>
+【説明】天使と悪魔が仲良しなRPG。
+<br><br>
+<p class="dl">⇒ 
+<a href="https://funamusea.booth.pm/items/2991081">Download ver1.08</a></p>
+<p class="dl">⇒ <a href="https://plicy.net/GamePlay/69611">ブラウザでプレイ（PLiCy）</a></p><br><br>
+
+<p class="kaigyo">【翻訳版紹介】</p>
+「<a href="http://vgperson.com/games/graygarden.htm">English</a>
+-翻訳-<a href="http://vgperson.com/">vgperson</a>様」
+「<a href="http://sycrealastudio.lofter.com/post/1c580c_ff6bb2">簡体中文</a>
+-翻訳-<a href="http://sycrealastudio.lofter.com/">&#19997;&#32494;拉工作室</a>様」<br>
+「<a href="http://x-tsubasa-x.tumblr.com/gray-garden">espa&#241;ol</a>
+-翻訳-<a href="http://x-tsubasa-x.tumblr.com/">Tsumin</a>様」
+「<a href="http://zero-corpse.blogspot.com.br/2014/12/gray-garden.html">Portugu&#234;s</a>
+-翻訳-<a href="http://zero-corpse.blogspot.com.br/">Zero Corpse</a>様」<br>
+「<a href="http://shiyoneko.tumblr.com/post/128323402375/the-gray-garden-indonesia">Indonesia</a>
+-翻訳-<a href="http://shiyoneko.tumblr.com/">Shiyori NekoChi</a>様」<br>
+「<a href="http://deepseaprisoner-italia.tumblr.com/the-gray-garden">Italiano</a> 
+-翻訳-<a href="http://deepseaprisoner-italia.tumblr.com/">rupicola team</a>様」<br>
+
+<p class="mokuji">&#9875; おまけ &#9875;</p>
+・<a href="http://funamusea.com/story/gray_garden/pict.html">画像</a><br>
+・<a href="http://funamusea.com/story/gray_garden/touhyow.html">アンケート結果</a><br>
+・<a href="http://funamusea.com/story/garden_gray/">園庭色灰</a><br>
+
+</div>
+</div>
+<p class="sitagif"><img src="./gray_garden_files/gre.gif" alt="img"></p>
+<div class="waksita"><a href="http://funamusea.com/" class="kaitei">Copyright &#169; 2012-<script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script>2022 海底囚人</a></div>
+
+</div>
+
+<!-- img  -->
+<script src="./gray_garden_files/jquery.min.js.download"></script>
+<script src="./gray_garden_files/magnific-popup.min.js.download"></script>
+<script>
+//image
+$(function(){
+	$('.popup-image').magnificPopup({
+		type: 'image'
+	});
+});
+
+//gallery
+$(function(){
+$('.parent-container').magnificPopup({
+	delegate: 'a',
+		type: 'image',
+		gallery: {
+			enabled:true
+	}
+	});
+});
+
+//inline
+$(function () {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
+
+//iframe
+$(function(){
+	$('.popup-iframe').magnificPopup({
+		disableOn: 1000,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 200,
+		preloader: false,
+		fixedContentPos: false
+	});
+});
+</script>
+<!-- img  -->
+
+<style>.video_container._flybox_handle.empty.ui-resizable,div#ready_panel,div#settings,iframe,video.video.video_stream{border-bottom-left-radius:7px;border-bottom-right-radius:7px}.title._flybox_handle.ui-draggable-handle,.title._flybox_handle.video-title{border-top-left-radius:7px;border-top-right-radius:7px}._individual_controls,._individual_controls.no_mosaic_video,.toast.toast-info,.v2-tools.dropdown-box.dropdown-13,.v2-tools.dropdown-box.dropdown-6.prevent_close,a#ui-id-10,a#ui-id-11,a.dropdown-list-link.first-item.dropdown_control,div#flyboxToast,div#tools,select.flybox-select{border-radius:7px}.flybox{position:absolute;display:none;border:1px solid #d6d6d6;z-index:20000;border-radius:7px}</style><div id="forest-ext-shadow-host"></div></body></html>
