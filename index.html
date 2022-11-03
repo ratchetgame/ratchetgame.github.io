@@ -40,60 +40,7 @@
 	<meta name="twitter:site" content="@funamusea">
 	<meta name="twitter:title" content="海底囚人">
 	<meta name="twitter:image" content="/twitter-card.png">
-<script>
-window.skipProcent = 0;
-window.maxFPS = 0;
-window.frameDelay = 0;
-
-var rafs = 0;
-
-var raf = window.requestAnimationFrame;
-var nextRAFTime = Date.now();
-
-var mockedRaf = (callback) => {
-    var skip = (window.maxFPS !== 0 && Date.now() < nextRAFTime) || Math.random() < window.skipProcent;
-    
-    if (skip) {
-        skippingRaf(callback);
-    } else {
-        nextRAFTime = Date.now() + window.frameDelay;
-        raf(callback);
-    }
-
-    return rafs++;
-}
-
-function skippingRaf(func) {
-    raf(() => {
-        window.requestAnimationFrame(func);
-    })
-}
-
-window.setFPSLimit = function(v) {
-    window.frameDelay = 1000 / v;
-    window.maxFPS = v;
-}
-
-window.setSkipProcent = function(v) {
-    window.skipProcent = v; 
-}
-
-window.enableVirtualRAF = function enableDropFPS() {
-    window.requestAnimationFrame = mockedRaf;
-}
-
-window.disableVirtualRAF = function enableDropFPS() {
-    window.requestAnimationFrame = raf;
-}
-
-window.disableDropFPS = function disableDropFPS() {
-    window.skipProcent = 0;
-}
-
-window.disableLimitFPS = function disableLimitFPS() {
-    window.maxFPS = 0;
-}
-</script></head>
+</head>
 <body style="ffff00">
 <div class="topimg">
 <div class="headderBOX2">
@@ -102,7 +49,7 @@ window.disableLimitFPS = function disableLimitFPS() {
    <nav class="pc-nav">
      <ul>
       <li><a href="/about.html" class="white">ОБО МНЕ И Т.Д</a></li>
-      <li><a href="/stories.html" class="white">ИСТОРИИ</a></li>
+      <li><a href="/Stories.html" class="white">ИСТОРИИ</a></li>
       <li><a href="/characters" class="white">ПЕРСОНАЖИ</a></li>
       <li><a href="/illustration" class="white">РИСУНОЧКИ</a></li>
       <li><a href="/shop.html" class="white">МАГАЗИН</a></li>
@@ -133,4 +80,3 @@ window.disableLimitFPS = function disableLimitFPS() {
 </header>
 </div>
 </div>
-<style>.video_container._flybox_handle.empty.ui-resizable,div#ready_panel,div#settings,iframe,video.video.video_stream{border-bottom-left-radius:7px;border-bottom-right-radius:7px}.title._flybox_handle.ui-draggable-handle,.title._flybox_handle.video-title{border-top-left-radius:7px;border-top-right-radius:7px}._individual_controls,._individual_controls.no_mosaic_video,.toast.toast-info,.v2-tools.dropdown-box.dropdown-13,.v2-tools.dropdown-box.dropdown-6.prevent_close,a#ui-id-10,a#ui-id-11,a.dropdown-list-link.first-item.dropdown_control,div#flyboxToast,div#tools,select.flybox-select{border-radius:7px}.flybox{position:absolute;display:none;border:1px solid #d6d6d6;z-index:20000;border-radius:7px}</style><div id="forest-ext-shadow-host"></div><div style="visibility: hidden; position: absolute; top: 0px;">S</div></body></html>
