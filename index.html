@@ -60,24 +60,6 @@
      </ul>
    </nav>
    <nav class="sp-nav">
-	   <div class="modal"><br>    <span class="close-btn" onclick="closeModal()">×</span><br>
-		   <h2>Вопрос</h2><br>
-		   <p>are you british?...</p><br>
-		   <button onclick="answerYes()">Да</button><br>
-		   <button onclick="answerNo()">Нет</button><br></div>
-	   <br/>    function openModal() {<br/>  
-	   document.querySelector('.overlay').style.display = 'block';<br/> 
-	   document.querySelector('.modal').style.display = 'block';<br/> 
-	   }<br/><br/>    function closeModal() {<br/> 
-	   document.querySelector('.overlay').style.display = 'none';<br/> 
-	   document.querySelector('.modal').style.display = 'none';<br/> 
-	   }<br/><br/>    function answerYes() {<br/>
-	   console.log('Ответ: Да');<br/> 
-	   closeModal();<br/>
-	   }<br/><br/>  
-	   function answerNo() {<br/>  
-	   console.log('Ответ: Нет');<br/>    
-	   window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Здесь указываете ссылку на видео<br/>        closeModal();<br/>    }<br/>
   </div>
 </div>
     <ul>
@@ -100,3 +82,65 @@
 </header>
 </div>
 </div>
+<style>
+        /* Скрыть модальное окно по умолчанию */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        /* Стиль для модального содержимого */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2>Are you British?</h2>
+        <button onclick="playVideo()">Yes</button>
+        <button onclick="closeModal()">No</button>
+    </div>
+</div>
+
+<!-- Видео элемент -->
+<video id="myVideo" controls style="display: none;">
+    <source src="miku.mp4" type="video/mp4">
+</video>
+
+<script>
+    // Открыть модальное окно при загрузке страницы
+    window.onload = function() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    }
+
+    // Закрыть модальное окно
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    // Показать видео и закрыть модальное окно
+    function playVideo() {
+        var modal = document.getElementById("myModal");
+        var video = document.getElementById("myVideo");
+        modal.style.display = "none";
+        video.style.display = "block";
+        video.play();
+    }
+</script>
