@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колесо рандома</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .wheel-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(var(--colors));
+            transform: rotate(0deg);
+            transition: transform 3s ease-out;
+        }
+        .pointer {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid red;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+        .input-container input {
+            width: 50px;
+            margin: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .sector-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wheel-container">
+    <div class="wheel" id="wheel"></div>
+    <div class="pointer"></div>
+</div>
+
+<div class="sector-controls">
+    <div class="input-container" id="input-container">
+        <!-- Секторы будут добавляться сюда -->
+    </div>
+    <button onclick="addSector()">Добавить сектор</button>
+    <button onclick="removeSector()">Удалить сектор</button>
+    <button onclick="spinWheel()">Крутить колесо</button>
+</div>
+
+<script>
+    const wheel = document.getElementById('wheel');
+    const inputContainer = document.getElementById('input-container');
+    let sectorCount = 0;
+
+    // Добавление нового сектора
+    function addSector() {
+        sectorCount++;
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.min = '0';
+        input.max = '100';
+        input.value = '0';
+        input.id = `percent${sectorCount}`;
+        const label = document.createElement('label');
+        label.htmlFor = input.id;
+        label.textContent = `Сектор ${sectorCount} (%):`;
+        inputContainer.appendChild(label);
+        inputContainer.appendChild(input);
+        updateWheel();
+    }
+
+    // Удаление последнего сектора
+    function removeSector() {
+        if (sectorCount > 0) {
+            inputContainer.removeChild(inputContainer.lastChild); // Удаляем input
+            inputContainer.removeChild(inputContainer.lastChild); // Удаляем label
+            sectorCount--;
+            updateWheel();
+        }
+    }
+
+    // Обновление колеса на основе введенных процентов
+    function updateWheel() {
+        const inputs = document.querySelectorAll('.input-container input');
+        const percentages = Array.from(inputs).map(input => parseInt(input.value, 10));
+        const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'cyan'];
+        let gradient = '';
+        let startAngle = 0;
+
+        percentages.forEach((percent, index) => {
+            const endAngle = startAngle + (percent / 100) * 360;
+            gradient += `${colors[index % colors.length]} ${startAngle}deg ${endAngle}deg, `;
+            startAngle = endAngle;
+        });
+
+        wheel.style.setProperty('--colors', gradient.slice(0, -2));
+    }
+
+    // Вращение колеса
+    function spinWheel() {
+        const inputs = document.querySelectorAll('.input-container input');
+        const percentages = Array.from(inputs).map(input => parseInt(input.value, 10));
+        const total = percentages.reduce((sum, percent) => sum + percent, 0);
+
+        if (total !== 100) {
+            alert('Сумма процентов должна быть равна 100!');
+            return;
+        }
+
+        // Сброс вращения перед новым запуском
+        wheel.style.transition = 'none';
+        wheel.style.transform = 'rotate(0deg)';
+        setTimeout(() => {
+            wheel.style.transition = 'transform 3s ease-out';
+            const randomDegree = Math.floor(Math.random() * 360) + 3600; // 10 полных оборотов + случайный угол
+            wheel.style.transform = `rotate(${randomDegree}deg)`;
+        }, 10); // Небольшая задержка для сброса трансформации
+    }
+
+    // Инициализация начального сектора
+    addSector();
+</script>
+
+</body>
+</html>
